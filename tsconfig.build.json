@@ -20,6 +20,10 @@
     "node_modules/microbundle/index.d.ts"
   ],
   "exclude": [
+    "test/*",
+    "jest.*.ts",
+    "**/*.test.ts",
+    "**/*.e2e-test.ts",
     "node_modules",
     "dist",
     ".tmp",

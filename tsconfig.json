@@ -13,11 +13,15 @@
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": [
+      "jest",
+    ]
   },
   "include": [
     "src/**/*.ts",
     "test/**/*.test.ts",
+    "test/**/*.e2e-test.ts",
     "jest.config.ts"
   ],
   "exclude": [

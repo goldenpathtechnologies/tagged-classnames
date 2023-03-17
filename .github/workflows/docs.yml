@@ -15,6 +15,7 @@ on:
       - pnpm-lock.yaml
       - .github/workflows/release.yml
       - "src/**"
+      - "test/**"
     tags-ignore:
       - "**"
 
