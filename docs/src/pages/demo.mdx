@@ -1,0 +1,75 @@
+---
+---
+
+import TippinButton from "../../external/index";
+import logo from "../images/gpt-logo.png";
+
+# React Tippin.me Web Button Demo
+
+### Styling with 'className' attribute and TailwindCSS classes
+
+<TippinButton
+    userName="GoldenPathTech"
+    className="p-4 font-bold text-2xl border-amber-400 bg-amber-300 hover:bg-amber-400 border-2 rounded-2xl"
+>
+    Tippin.me
+</TippinButton>
+
+```tsx
+<TippinButton
+    userName="GoldenPathTech"
+    className="p-4 font-bold text-2xl border-amber-400 bg-amber-300 hover:bg-amber-400 border-2 rounded-2xl"
+>
+    Tippin.me
+</TippinButton>
+```
+
+### Styling with 'style' attribute
+
+<TippinButton
+    userName="GoldenPathTech"
+    style={{
+        backgroundColor: `lightsalmon`,
+        borderWidth: `2px`,
+        borderColor: `lightcoral`,
+        borderRadius: `10px`,
+        padding: `5px`,
+        fontWeight: `bold`,
+        fontSize: `2rem`,
+    }}
+>
+    Tippin.me
+</TippinButton>
+
+```tsx
+<TippinButton
+    userName="GoldenPathTech"
+    style={{
+        backgroundColor: `lightsalmon`,
+        borderWidth: `2px`,
+        borderColor: `lightcoral`,
+        borderRadius: `10px`,
+        padding: `5px`,
+        fontWeight: `bold`,
+        fontSize: `2rem`,
+    }}
+>
+    Tippin.me
+</TippinButton>
+```
+
+### Tippin button as an image
+
+<TippinButton userName="GoldenPathTech">
+    <img src={logo} alt="Golden Path Technologies logo as Tippin.me button" />
+</TippinButton>
+
+```tsx
+import logo from "../images/gpt-logo.png";
+
+// ...
+
+<TippinButton userName="GoldenPathTech">
+    <img src={logo} alt="Golden Path Technologies logo as Tippin.me button" />
+</TippinButton>
+```

@@ -1,0 +1,42 @@
+{
+  "plugins": [
+    ["prismjs", {
+      "languages": [
+        "javascript",
+        "jsx",
+        "typescript",
+        "tsx",
+        "css",
+        "scss",
+        "markup",
+        "go",
+        "bash",
+        "powershell",
+        "markdown",
+        "json",
+        "c"
+      ],
+      "plugins": [
+        "line-numbers",
+        "toolbar",
+        "copy-to-clipboard",
+        "line-highlight",
+        "custom-class",
+        "match-braces",
+        "show-language"
+      ],
+      "css": true
+    }]
+  ],
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        },
+        "reactRuntime": "automatic"
+      }
+    ]
+  ]
+}
