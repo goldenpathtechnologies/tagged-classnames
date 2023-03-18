@@ -44,8 +44,7 @@
     "clean:docs": "pnpm --dir docs run clean",
     "update-content:docs": "pnpm --dir docs run copy-external"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/react": "^17.0.38",
@@ -89,14 +88,17 @@
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/exec",
-      ["@semantic-release/git", {
-        "assets": [
-          "package.json",
-          "src/version.ts",
-          "CHANGELOG.md"
-        ],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "src/version.ts",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
       "@semantic-release/github"
     ],
     "preset": "conventionalcommits",
