@@ -2,57 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Open Sans", sans-serif;
-  background-image: url("./../images/bg.png");
-  background-repeat: repeat;
-}
+@layer base {
+  body {
+    @apply font-body bg-repeat bg-[url('./../images/bg.png')];
+  }
 
-h1 > span,
-h2 > span,
-h3 > span,
-h4 > span,
-h5 > span,
-h6 > span
-{
-  font-family: "Twemoji Mozilla",
-  "Apple Color Emoji",
-  "Segoe UI Emoji",
-  "Segoe UI Symbol",
-  "Noto Color Emoji",
-  "EmojiOne Color",
-  "Android Emoji",
-  sans-serif;
-}
+  h1 > span,
+  h2 > span,
+  h3 > span,
+  h4 > span,
+  h5 > span,
+  h6 > span
+  {
+    @apply font-emoji;
+  }
 
-h1 {
-  @apply font-extrabold text-4xl mb-4;
-}
+  h1 {
+    @apply font-extrabold text-4xl mb-4;
+  }
 
-h2 {
-  @apply font-bold text-3xl mb-4 mt-8;
-}
+  h2 {
+    @apply font-bold text-3xl mb-4 mt-8;
+  }
 
-h3 {
-  @apply font-bold text-2xl mb-4 mt-8;
-}
+  h3 {
+    @apply font-bold text-2xl mb-4 mt-8;
+  }
 
-pre[class*="language-"] {
-  @apply mb-4 !important;
-}
+  pre[class*="language-"] {
+    @apply mb-4 !important;
+  }
 
-a {
-  @apply text-blue-500 hover:underline;
-}
+  a {
+    @apply text-blue-500 hover:underline;
+  }
 
-table {
-  @apply border border-black border-collapse;
-}
+  table {
+    @apply border border-black border-collapse;
+  }
 
-th {
-  @apply border border-black p-4;
-}
+  th {
+    @apply border border-black p-4;
+  }
 
-td {
-  @apply border border-black p-4;
+  td {
+    @apply border border-black p-4;
+  }
 }

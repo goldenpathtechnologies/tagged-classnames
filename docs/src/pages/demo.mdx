@@ -1,75 +1,123 @@
 ---
 ---
 
-import TippinButton from "../../external/index";
-import logo from "../images/gpt-logo.png";
+import tw, { cx } from "../../external/index";
 
-# React Tippin.me Web Button Demo
+# Demo
 
-### Styling with 'className' attribute and TailwindCSS classes
+Below are some examples of `tagged-classnames` in action. To get a full picture of what's going on in this page,
+please view Developer Mode in your browser. You can also view the
+[source code for this page](https://github.com/goldenpathtechnologies/tagged-classnames/blob/main/docs/src/pages/demo.mdx)
+to see now everything works.
 
-<TippinButton
-    userName="GoldenPathTech"
-    className="p-4 font-bold text-2xl border-amber-400 bg-amber-300 hover:bg-amber-400 border-2 rounded-2xl"
+<button
+  type="button"
+  className={tw`
+    focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4
+    focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2
+    dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900
+  `}
 >
-    Tippin.me
-</TippinButton>
+  With tagged-classnames
+</button>
 
-```tsx
-<TippinButton
-    userName="GoldenPathTech"
-    className="p-4 font-bold text-2xl border-amber-400 bg-amber-300 hover:bg-amber-400 border-2 rounded-2xl"
+```jsx
+<button
+  type="button"
+  className={tw`
+    focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4
+    focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2
+    dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900
+  `}
 >
-    Tippin.me
-</TippinButton>
+  With tagged-classnames
+</button>
 ```
 
-### Styling with 'style' attribute
-
-<TippinButton
-    userName="GoldenPathTech"
-    style={{
-        backgroundColor: `lightsalmon`,
-        borderWidth: `2px`,
-        borderColor: `lightcoral`,
-        borderRadius: `10px`,
-        padding: `5px`,
-        fontWeight: `bold`,
-        fontSize: `2rem`,
-    }}
+<button
+  type="button"
+  className={`
+    text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4
+    focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2
+    dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700
+    dark:border-gray-700
+  `}
 >
-    Tippin.me
-</TippinButton>
+  Without tagged-classnames
+</button>
 
-```tsx
-<TippinButton
-    userName="GoldenPathTech"
-    style={{
-        backgroundColor: `lightsalmon`,
-        borderWidth: `2px`,
-        borderColor: `lightcoral`,
-        borderRadius: `10px`,
-        padding: `5px`,
-        fontWeight: `bold`,
-        fontSize: `2rem`,
-    }}
+```jsx
+<button
+  type="button"
+  className={`
+    text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4
+    focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2
+    dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700
+    dark:border-gray-700
+  `}
 >
-    Tippin.me
-</TippinButton>
+  Without tagged-classnames
+</button>
 ```
 
-### Tippin button as an image
+<button
+  type="button"
+  className={tw`
+    focus:outline-none ${`text-white`} bg-green-700 hover:bg-green-800 focus:ring-4
 
-<TippinButton userName="GoldenPathTech">
-    <img src={logo} alt="Golden Path Technologies logo as Tippin.me button" />
-</TippinButton>
+    // Single line comment (won't appear in the DOM)
+    focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2
 
-```tsx
-import logo from "../images/gpt-logo.png";
+    /**
+     * Multiline block comment (this also won't appear in the DOM)
+     */
+    dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800
+  `}
+>
+  Comments and string interpolation
+</button>
 
-// ...
+```jsx
+<button
+  type="button"
+  className={tw`
+    focus:outline-none ${`text-white`} bg-green-700 hover:bg-green-800 focus:ring-4
 
-<TippinButton userName="GoldenPathTech">
-    <img src={logo} alt="Golden Path Technologies logo as Tippin.me button" />
-</TippinButton>
+    // Single line comment (won't appear in the DOM)
+    focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2
+
+    /**
+     * Multiline block comment (this also won't appear in the DOM)
+     */
+    dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800
+  `}
+>
+  Comments and string interpolation
+</button>
+```
+
+<button
+  type="button"
+  className={cx`
+    text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300
+    font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600
+    dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
+  `}
+  onClick={() => alert(`... but comments will be rendered in the DOM!`)}
+>
+  cx works just as well...
+</button>
+
+```jsx
+<button
+  type="button"
+  className={cx`
+    text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300
+    font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600
+    dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
+  `}
+  onClick={() => alert(`... but comments will be rendered in the DOM!`)}
+>
+  cx works just as well...
+</button>
 ```

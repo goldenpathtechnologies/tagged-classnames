@@ -11,6 +11,19 @@ module.exports = {
     container: {
       center: true,
     },
+    fontFamily: {
+      body: [`"Open Sans"`, `Helvetica`, `Arial`, `sans-serif`],
+      emoji: [
+        `"Twemoji Mozilla"`,
+        `"Apple Color Emoji"`,
+        `"Segoe UI Emoji"`,
+        `"Segoe UI Symbol"`,
+        `"Noto Color Emoji"`,
+        `"EmojiOne Color"`,
+        `"Android Emoji"`,
+        `sans-serif`,
+      ],
+    },
   },
   plugins: [],
 };

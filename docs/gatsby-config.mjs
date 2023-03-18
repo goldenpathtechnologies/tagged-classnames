@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
-import { GatsbyConfig } from "gatsby";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 
-const config: GatsbyConfig = {
+const config = {
   plugins: [
     `gatsby-plugin-pnpm`,
     `gatsby-plugin-postcss`,
@@ -19,6 +19,9 @@ const config: GatsbyConfig = {
           remarkPlugins: [
             remarkGfm,
           ],
+          rehypePlugins: [
+            rehypeSlug,
+          ],
         },
       },
     },
@@ -26,14 +29,14 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: `./src/pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/external`,
+        path: `./external`,
       },
     },
   ],
