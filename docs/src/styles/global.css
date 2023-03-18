@@ -48,4 +48,8 @@
   td {
     @apply border border-black p-4;
   }
+
+  ul {
+    @apply list-disc list-outside ml-8;
+  }
 }

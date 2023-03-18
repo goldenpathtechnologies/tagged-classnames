@@ -9,7 +9,6 @@ import rehypeSlug from "rehype-slug";
 
 const config = {
   plugins: [
-    `gatsby-plugin-pnpm`,
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-mdx`,

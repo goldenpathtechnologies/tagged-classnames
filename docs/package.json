@@ -5,13 +5,13 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "pnpm run prepare-content && gatsby build",
-    "develop": "pnpm run prepare-content && gatsby develop",
-    "start": "pnpm run prepare-content && gatsby develop",
+    "build": "yarn run prepare-content && gatsby build",
+    "develop": "yarn run prepare-content && gatsby develop",
+    "start": "yarn run prepare-content && gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "prepare-content": "pnpm run reset-external && pnpm run copy-external && pnpm run rename-license",
+    "prepare-content": "yarn run reset-external && yarn run copy-external && yarn run rename-license",
     "copy-external": "copyfiles -f ../src/index.ts ../README.md ../LICENSE ../CODE_OF_CONDUCT.md ../CHANGELOG.md ./external",
     "reset-external": "rimraf ./external && mkdir external",
     "rename-license": "renamer --find LICENSE --replace LICENSE.md external/LICENSE"
@@ -34,9 +34,8 @@
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
     "babel-plugin-prismjs": "^2.1.0",
-    "babel-preset-gatsby": "^2.14.0",
+    "babel-preset-gatsby": "^3.7.0",
     "copyfiles": "^2.4.1",
-    "gatsby-plugin-pnpm": "^1.2.10",
     "gatsby-plugin-postcss": "^6.7.0",
     "postcss": "^8.4.21",
     "renamer": "^4.0.0",

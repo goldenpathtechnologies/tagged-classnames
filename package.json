@@ -38,11 +38,11 @@
     "format": "eslint . --fix --ext ts --ext tsx",
     "lint": "eslint . --ext ts --ext tsx",
     "type-check": "tsc --pretty --noEmit",
-    "build:docs": "pnpm --dir docs run build",
-    "develop:docs": "pnpm --dir docs run develop",
-    "serve:docs": "pnpm --dir docs run serve",
-    "clean:docs": "pnpm --dir docs run clean",
-    "update-content:docs": "pnpm --dir docs run copy-external"
+    "build:docs": "yarn --cwd docs run build",
+    "develop:docs": "yarn --cwd docs run develop",
+    "serve:docs": "yarn --cwd docs run serve",
+    "clean:docs": "yarn --cwd docs run clean",
+    "update-content:docs": "yarn --cwd docs run copy-external"
   },
   "dependencies": {},
   "devDependencies": {
