@@ -1,4 +1,4 @@
-export default function tw(classNames: TemplateStringsArray, ...args: string[]): string {
+export function tw(classNames: TemplateStringsArray, ...args: string[]): string {
   // Block comment regex pattern modified from:
   // https://www.npmjs.com/package/block-comment-regex?activeTab=code
   const blockCommentPattern = /(\/\*(?!(\*?\/))(.|(\r?\n))+?\*\/(\r?\n)?)|(\/\*\*\/)/g;
@@ -31,6 +31,8 @@ export default function tw(classNames: TemplateStringsArray, ...args: string[]):
     .replace(/\s+/g, ` `)
     .trim();
 }
+
+export default tw;
 
 export function cx(classNames: TemplateStringsArray, ...args: string[]): string {
   return classNames.concat(args).join(` `).replace(/\s+/g, ` `).trim();
