@@ -1,6 +1,6 @@
 {
   "name": "tagged-classnames",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility designed to ease maintenance and organization of Tailwind classes.",
   "author": "Daryl G. Wright <daryl@goldenpath.ca>",
   "license": "MIT",
